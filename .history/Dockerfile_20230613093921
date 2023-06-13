@@ -1,0 +1,11 @@
+ARG sendgrid_key
+
+FROM amd64/ubuntu as base
+
+
+
+WORKDIR /build
+
+
+RUN echo "sendgridKey: $sendgrid_key" > env.yaml
+RUN cat env.yaml
